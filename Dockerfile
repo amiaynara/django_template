@@ -10,6 +10,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY template_app ./
 
+COPY entrypoint.sh ./
+RUN chmod +x entrypoint.sh
+
 EXPOSE 8000
 
-CMD ["./manage.py", "runserver", "0.0.0.0:8000"]
+ENTRYPOINT ["/home/appuser/entrypoint.sh"]
+
+# Use below to pass arguments to the entrypoint exec
+# CMD ["arg 1", "arg2"]
