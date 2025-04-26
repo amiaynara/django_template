@@ -1,0 +1,21 @@
+# create a dockerfile
+
+FROM python:3.12
+
+WORKDIR /home/appuser
+
+COPY requirements.txt ./
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY entrypoint.local.sh ./entrypoint.sh
+RUN chmod +x entrypoint.sh
+
+EXPOSE 8000
+
+RUN ls -la
+
+ENTRYPOINT ["/home/appuser/entrypoint.sh"]
+
+# Use below to pass arguments to the entrypoint exec
+# CMD ["arg 1", "arg2"]

@@ -1,15 +1,17 @@
-
+# for development
 
 services:
   backend:
     build:
       context: template_app
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.local 
     container_name: django
     env_file:
       - ./template_app/.env
     ports:
       - "8000:8000"
+    volumes:
+      - ./template_app:/home/appuser
 
   db:
     image: postgres:latest

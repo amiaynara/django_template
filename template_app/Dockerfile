@@ -1,16 +1,11 @@
-# create a dockerfile
-
 FROM python:3.12
 
 WORKDIR /home/appuser
 
-COPY requirements.txt ./
+COPY template_app ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY template_app ./
-
-COPY entrypoint.sh ./
 RUN chmod +x entrypoint.sh
 
 EXPOSE 8000
