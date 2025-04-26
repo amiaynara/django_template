@@ -1,15 +1,26 @@
 
-
 services:
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    volumes:
+      - ./template_app/staticfiles:/home/appuser/staticfiles  # Static files
+      - ./template_app/media:/home/appuser/media  # Media files
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+
   backend:
     build:
       context: template_app
       dockerfile: Dockerfile
     container_name: django
+    depends_on:
+      - db
     env_file:
       - ./template_app/.env
-    ports:
-      - "8000:8000"
 
   db:
     image: postgres:latest
