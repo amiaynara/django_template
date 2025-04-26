@@ -2,6 +2,11 @@
 
 
 ### Roadmap
+- [ ] Set up the basic backend application
+- [ ] Dockerize
+- [ ] Add Gunicorn
+- [ ] Add nginx
+- [ ] Add separate environments (dev and production)
 - [ ] Add DRF
 - [ ] Add swagger or equivalent
 - [ ] Use various token authentications (Basic token, JWT and more)
