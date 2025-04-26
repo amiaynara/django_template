@@ -2,3 +2,5 @@
 .django_template
 *.pyc
 *.sqlite3
+
+.env
