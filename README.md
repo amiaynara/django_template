@@ -9,6 +9,7 @@
 - [x] Add separate environments (dev and production)
 - [ ] Add DRF
 - [ ] Add swagger or equivalent
+- [ ] Add tests
 - [ ] Use various token authentications (Basic token, JWT and more)
 - [ ] Deploy on AWS
 - [ ] Buy a domain
