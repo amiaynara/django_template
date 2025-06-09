@@ -18,3 +18,4 @@
 - [ ] Add support for Kafka (may be another fork)
 - [ ] Add a frontend (another fork)
 - [ ] Create CI/CD
+- [ ] CDK
