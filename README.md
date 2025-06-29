@@ -7,6 +7,7 @@
 - [x] Add Gunicorn
 - [x] Add nginx
 - [x] Add separate environments (dev and production)
+- [ ] Three apps (micro-services) that do the same thing but one in django bare bones, second using json return, third using DRF
 - [ ] Add DRF
 - [ ] Add swagger or equivalent
 - [ ] Add tests
