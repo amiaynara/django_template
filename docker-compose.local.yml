@@ -10,6 +10,7 @@ services:
       - ./template_app/.env
     ports:
       - "8000:8000"
+    user: "${USER_ID}:${GROUP_ID}"
     volumes:
       - ./template_app:/home/appuser
 
