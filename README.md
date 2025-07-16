@@ -20,3 +20,4 @@
 - [ ] Add a frontend (another fork)
 - [ ] Create CI/CD
 - [ ] CDK
+- [ ] QoS
